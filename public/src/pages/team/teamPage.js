@@ -1,26 +1,33 @@
 import loadChart from './team.js';
 
 export default {
-  getElements: () => `<p>
-  <table>
-    <tr>
-      <td>
-        <h2 class="caText caHeader">Copa América 2016</h2>
-      </td>
-      <td>
-        <h2 class="euroText euHeader">Euro 2016</h2>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <div id="team"></div>
-      </td>
-    </tr>
-    <tr>
-      <td class="caTableText"><b class="caText">16 American teams</b> participated in the 45th edition of Copa América since its inception in 1916.</td>
-      <td class="euTableText"><b class="euroText">24 Europeans teams</b> participated in the 15th UEFA European Championship. </td>
-    </tr>
-  </table>
-</p>`,
+  getElements: () => `
+  <div id="intro" class="row">
+    <div class="col-12">
+      <h3>Teams</h3>
+     
+    </div>
+    
+  </div>
+  <div class="container">
+  <div class="row">
+      <div class="col-lg-12 col-sm-12">
+          <div class="row">
+                      <div class="col-lg-6 col-sm-6" id="leftContent">
+                        <p><em class="caText">16 American teams</em> participated in the 45th edition of <em class="caText">Copa América</em> since its inception in 1916.</p>
+                      </div>
+                      <div class="col-lg-6 col-sm-6 " id="rightContent">
+                        <p><em class="euroText">24 Europeans teams</em> participated in the 15th <em class="euroText">UEFA European Championship.</em></p>
+                      </div>
+          </div>
+       </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 text-center">
+        <div id="team" class="mb-3 "></div>
+      </div>
+    </div>
+    
+  </div>`,
   afterRender: () => loadChart()
 };

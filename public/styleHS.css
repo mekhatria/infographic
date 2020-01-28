@@ -3,26 +3,53 @@
    display: inline-block;
  }
 
- .button {
-   border: 0px;
-   border-radius: 12px;
-   /*color:white;*/
-   padding: 20px;
-   text-align: center;
-   display: inline-block;
-   font-size: 16px;
-   cursor: pointer;
- }
+ .btn{
+  min-width:100px;
+  margin:5px;
+}
 
- .outer {
-   text-align: center;
-   padding: 20px;
- }
+ .btn-primary{
+  color: #fff;
+  background-color: #012661;
+  border-color: #012661;
+  font-weight: 700;
+  font-size:.6em;
+  padding:2px;
+  min-width:100px;
+}
 
- .inner {
-   margin: 0 auto;
-   display: inline-block;
- }
+.btn-lg {
+  padding: .5rem 1rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5;
+  border-radius: .3rem;
+  width:100%;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0069d9;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #012661;
+  border-color: #012661;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+ color: #666;
+  background-color: #fff;
+  border-color: #666;
+}
+
+ .btn-primary.focus, .btn-primary:focus {
+  color: #fff;
+  background-color: #012661;
+  border-color: transparent;
+  box-shadow: none;
+}
 
  button:focus {
    outline: 0;
@@ -37,33 +64,32 @@
  .flagsCountries {
    position: relative;
    top: -5px;
+   margin-right: 5px;
  }
 
  body {
-   font-family: 'Open Sans', sans-serif;
-   font-weight: 200;
- }
+   font-family: 'Raleway', sans-serif;
+   font-weight: 400;
+  padding:0px; 
+  
+ 
+}
+
+h1{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+ font-size: 1.1em;
+  font-weight: 500;
+  
+  margin-bottom:0px;
+  
+}
 
  p {
    margin: 0 auto;
    width: 800px;
  }
 
- table .center {
-   margin-left: auto;
-   margin-right: auto;
-   max-width: 50%;
-   table-layout: fixed;
- }
-
- td {
-   width: 33%;
- }
-
- .caTableChart {
-   border-right: 1px solid rgba(204, 204, 204, 0.73);
-   float: right;
- }
+ 
 
  hr {
    width: 50%;
@@ -103,16 +129,28 @@
  }
 
  .caText {
-   color: #ff002b;
+   color: #d00;
  }
 
  .euroText {
-   color: #002bff;
+   color: #0272a4;
  }
 
- #team {
-   margin: auto;
- }
+ .euroText, .caText{
+  font-weight:300;
+  font-size:1.2em;
+  }
+  
+  p.caTableText, p.euTableText{
+    width:auto;
+    padding:0px;
+    font-size: 1rem;
+  }
+
+  #container .caTableChart{
+    float: none;
+    border-right:none !important;
+  }
 
  #caTeams {
    width: 260px;
@@ -164,7 +202,7 @@
    height: 250px;
    min-width: 310px;
    max-width: 800px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
@@ -172,61 +210,61 @@
    height: 250px;
    min-width: 310px;
    max-width: 800px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #caMostValuableSquad {
    height: 100px;
    min-width: 310px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #euroMostValuableSquad {
    height: 100px;
    min-width: 310px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #caAveragePlayerValuation {
    height: 100px;
    min-width: 310px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #euAveragePlayerValuation {
    height: 100px;
    min-width: 310px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #caGoalscorers {
    height: 100px;
    min-width: 310px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #euGoalscorers {
    height: 100px;
    min-width: 310px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #caMatches {
    min-width: 410px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
  #euMatches {
    min-width: 410px;
-   display: inline-block;
+   /* display: inline-block; */
    margin: 0 auto;
  }
 
@@ -247,16 +285,187 @@
    display: table-cell;
  }
 
- @media screen and (max-width: 1000px) {
-   .reduce {
-     display: block;
-     background-color: red;
-     float: auto !important;
-   }
-   .reduceRigth {
-     vertical-align: middle;
-     display: inline-block;
-     background-color: red;
-     float: auto !important;
-   }
+ .container p{
+  width:auto;
+}
+
+p,form{
+  text-align:left;
+}
+
+p{ padding:5px; }
+
+#intro{
+  margin:15px 0px;
+  
+}
+#intro p{
+  text-align: center;
+}
+
+#leftContent img{
+  width:70%
+}
+
+#rightContent img{
+  width:50%
+}
+
+h4{
+  font-size:1.2rem;
+  font-weight: 500;
+}
+
+h3{
+color:#012661;
+font-size: 2.2em;
+font-weight: 500;
+}
+
+.pollQuestion{
+  width:400px;
+  margin-bottom:10px
+}
+
+#rightSide{
+  padding-left:30px;
+  border-left:1px solid #ebebeb;
+}
+
+#leftSide, #rightSide{
+  margin-top:20px;
+}
+
+#leftSide p, #rightSide p{
+  height:130px;
+  text-align: left;
  }
+
+ #leftContent, #rightContent,
+ #leftContent #leftSide, #rightContent #rightSide {
+  margin-top:10px;
+ }
+ #leftContent p, #rightContent p {
+  text-align: left;
+  line-height: 1.9rem;
+  width:400px;
+  margin-bottom:15px;
+ }
+
+ #poll{
+   width:400px;
+ }
+ .question{
+   font-weight: 700;
+ }
+
+ span.f32 {
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+span.f32-inline {
+  display: inline;
+  height: 32px;
+  width: 32px;
+}
+
+ #leftSide .f32 .flag,
+ #rightSide .f32 .flag{
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  vertical-align: text-top;
+  line-height: 32px;
+  
+}
+
+#leftSide h3, #rightSide h3{
+font-size:1.4em;
+}
+
+#navigation{
+  display:inherit;
+}
+
+#navigation h1{
+ font-size:1.2rem
+ border-bottom:1px solid #ebebeb;
+}
+
+#navigation h2{
+  font-size:1rem;
+  font-weight: 700;
+ }
+#chartLinks{
+  display:none;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border:1px solid #ebebeb;
+  border-radius:3px;
+  font-size: .8em;
+  padding:5px 0px;
+  margin-bottom:5px;
+  margin-top:10px;
+  background-color:whitesmoke;
+}
+
+#chartLinks a.euroText, #chartLinks a.caText{
+  font-size:1em;
+  text-decoration: underline;
+  font-weight:500;
+  background-color: transparent;
+}
+
+#chartLinks a.euroText:hover{
+  color:#0272a4;
+  cursor: pointer;
+}
+
+#chartLinks a.caText:hover{
+  color:#d00;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:767px){
+
+  h3{
+    font-size:1.8em;
+  }
+  #leftContent p, #rightContent p {
+    width: 300px;
+  }
+  #rightSide {
+    padding-top:50px;
+    padding-left:0px;
+    border-left:none;
+    border-top: 1px solid #ebebeb;
+  }
+  #leftContent img{
+    width:120px;
+    padding:  5px;
+  }
+  #rightContent img{
+    width:91px;
+    padding:  5px;
+  }
+  #chartLinks{
+    display:inline;
+  }
+  #poll{
+    width:300px;
+  }
+  #caMatches, #euMatches {
+    min-width: 310px;
+    /* display: inline-block; */
+    margin: 0 auto;
+  }
+  #caMatches span, #euMatches span {
+    min-width: 310px;
+    /* display: inline-block; */
+    margin: 0 auto;
+  }
+}
+ 

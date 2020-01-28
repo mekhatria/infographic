@@ -57,7 +57,7 @@ export default () => {
     series: [
       {
         name: 'Goal scorers',
-        color: '#ff002b',
+        color: '#d00',
         data: [
           {
             y: 91
@@ -123,7 +123,7 @@ export default () => {
     series: [
       {
         name: 'Goal scorers',
-        color: '#002bff',
+        color: '#0272a4',
         data: [
           {
             y: 108

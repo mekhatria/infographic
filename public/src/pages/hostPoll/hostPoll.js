@@ -3,7 +3,7 @@ import { postPoll } from './../../../utils/hostAjax.js';
 
 export default () => {
   var arrayUpdated = [];
-  // var hostPoll = function() {
+
   var radios = document.getElementsByName('hostPoll');
 
   var arrSurvey = [
@@ -25,7 +25,5 @@ export default () => {
     arrSurvey[i].answer = radios[i].checked ? 1 : 0;
   }
   console.log('arrSurvey', arrSurvey);
-  //send email and the code to the server
   postPoll('hostPoll', { answers: arrSurvey });
-  //  };
 };

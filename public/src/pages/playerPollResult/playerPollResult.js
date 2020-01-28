@@ -16,7 +16,7 @@ export default () => {
           backgroundColor: backgroundColor
         },
         title: {
-          text: 'Result'
+          text: ''
         },
         subtitle: {
           text: null
@@ -31,11 +31,11 @@ export default () => {
             {
               useHTML: true,
               name: 'Copa Amérca',
-              categories: ['Lionel Messi', 'Luis Suarez', 'James Rodriguez']
+              categories: ['LM', 'LS', 'JR']
             },
             {
               name: 'Euro2016',
-              categories: ['Thomas Muller', 'Gareth Bale', 'Cristiano Ronaldo']
+              categories: ['TM', 'GB', 'CR']
             }
           ]
         },
@@ -54,26 +54,32 @@ export default () => {
             data: [
               {
                 y: arrayPlayerUpdated[0],
+                name: 'Lionel Messi',
                 color: americaColor
               },
               {
                 y: arrayPlayerUpdated[1],
+                name: 'Luis Suarez',
                 color: americaColor
               },
               {
                 y: arrayPlayerUpdated[2],
+                name: 'James Rodriguez',
                 color: americaColor
               },
               {
                 y: arrayPlayerUpdated[3],
+                name: 'Thomas Muller',
                 color: europeColor
               },
               {
                 y: arrayPlayerUpdated[4],
+                name: 'Gareth Bale',
                 color: europeColor
               },
               {
                 y: arrayPlayerUpdated[5],
+                name: 'Cristiano Ronaldo',
                 color: europeColor
               }
             ]

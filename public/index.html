@@ -2,9 +2,9 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="https://code.highcharts.com/maps/highcharts.js"></script>
     <script src="https://code.highcharts.com/maps/modules/map.js"></script>
     <script src="https://code.highcharts.com/modules/heatmap.js"></script>
@@ -16,29 +16,73 @@
     <script src="https://code.highcharts.com/modules/sunburst.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
     <script src="https://blacklabel.github.io/grouped_categories/grouped-categories.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://github.s3.amazonaws.com/downloads/lafeber/world-flags-sprite/flags32.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script type="module" src="index.js"></script>
     <script type="module" src="src/navigation.js"></script> 
     <!-- custom styling -->
     <link rel="stylesheet" href="styleHS.css">
     <!-- map code -->
     <script src="code.js"></script>
+
+    <style>
+
+    	
+
+      
+    	
+    	 
+	
+	
+
+    </style>
   </head>
-  <body style="background-color:#ffd40029">
-    <div class="outer " style="width:950px; margin:0 auto; display:table">
-      <div id="chartContainer">
-      </div> 
-      <div class="outer" style="width:800px; margin:0 auto;">
-        <button class="button inner" style=" border:0px" type="button" disabled id="backFct">Back</button>
-        <button class="button inner" style=" border:0px" type="button" id="nextFct">Next</button>
+  <body style="background-color:#ffffff" >
+    <div id="navigation" class="container-fluid position-sticky sticky-top" >
+      <div class="row">
+        <div class="col-12 border-bottom text-center" style="-webkit-box-shadow: -3px 4px 6px -8px #000000; box-shadow: -3px 4px 6px -8px #000000;background-color: #fff; ">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center mt-1">
+                  <div class="order-1"><h1 class="px-lg-0">Copa América &amp; UEFA Euro 2016: </h1><hr class="mb-1 mt-0"></div>
+                  <div class="order-2"> <h2>By The Numbers</h2></div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="row text-center mb-3">
+            <div class="col-12 ">
+                <button class="btn-sm btn-primary" type="button" disabled id="backFct">Back</button> 
+                <button class="btn-sm btn-primary" type="button" id="nextFct">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center" id="content">
+        </div>
+        <div class="col-12 text-center">
+        </div>
+      </div>
     </div>
   </body>
   <script>
     $(document).ready(function() {
       $('#backFct').click(getPreviousPage);
       $('#nextFct').click(getNextPage);
+      
+     
     });
   </script>
 </html>

@@ -3,7 +3,7 @@ import { getPoll } from './../../../utils/hostAjax.js';
 export default () => {
   setTimeout(function() {
     getPoll('hostPollGET').then(data => {
-      let arrayUpdated = [];
+      let arrayUpdated = [2, 5, 4, 7];
       for (let i = 0; i < data.answer.length; i++) {
         arrayUpdated[i] = data.answer[i];
       }
@@ -15,7 +15,7 @@ export default () => {
           backgroundColor: backgroundColor
         },
         title: {
-          text: 'Result'
+          text: ''
         },
         subtitle: {
           text: null
