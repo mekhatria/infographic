@@ -6,8 +6,9 @@ const keys = Object.keys(routes);
 
 const render = newPath => {
   const page = routes[newPath];
-  const container = document.querySelector('#chartContainer');
+  const container = document.querySelector('#content');
   path = newPath;
+
   container.innerHTML = page.getElements();
   if (page.afterRender) page.afterRender();
 };
@@ -22,16 +23,20 @@ const toggleButton = (id, query) => {
 };
 
 export const getNextPage = () => {
+  $('#navigation').show();
   const index = keys.findIndex(key => key === path);
   if (routes[keys[index]].onNext) routes[keys[index]].onNext();
-  console.log('routes[keys[index]]', routes[keys[index]]);
+  console.log('NEXT routes[keys[index]]', routes[keys[index]]);
+
   toggleButton('#nextFct', index + 1 === keys.length - 1);
   toggleButton('#backFct', false);
   render(keys[index + 1]);
 };
 export const getPreviousPage = () => {
   const index = keys.findIndex(key => key === path);
+
   toggleButton('#backFct', index - 1 === 0);
   toggleButton('#nextFct', false);
+
   render(keys[index - 1]);
 };

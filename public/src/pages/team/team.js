@@ -2,7 +2,14 @@ export default () => {
   Highcharts.mapChart('team', {
     chart: {
       map: 'custom/world-palestine-highres',
-      backgroundColor: backgroundColor
+      backgroundColor: backgroundColor,
+      borderColor:"#ebebeb",
+      borderWidth:1
+    },
+    legend:{
+        verticalAlign:'top',
+       
+        padding:20
     },
 
     title: {
@@ -16,7 +23,7 @@ export default () => {
     mapNavigation: {
       enabled: true,
       buttonOptions: {
-        verticalAlign: 'bottom'
+        verticalAlign: 'top'
       }
     },
     plotOptions: {

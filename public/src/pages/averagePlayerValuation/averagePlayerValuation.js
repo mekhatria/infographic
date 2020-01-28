@@ -57,7 +57,7 @@ export default () => {
     series: [
       {
         name: 'Average player valuation',
-        color: '#ff002b',
+        color: '#d00',
         data: [
           {
             y: 5.8
@@ -122,7 +122,7 @@ export default () => {
     series: [
       {
         name: 'Average player valuation',
-        color: '#002bff',
+        color: '#0272a4',
         data: [
           {
             y: 10.09

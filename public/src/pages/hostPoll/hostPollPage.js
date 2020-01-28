@@ -1,40 +1,53 @@
 import loadChart from './hostPoll.js';
 
 export default {
-  getElements: () => `<p>
-  <table>
-    <tr>
-      <td colspan="2">
-        <h1>Host</h1>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <h2>Where was Copa América 2016 hosted?</h2>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <form action=""> 
-        <input type="radio" name="hostPoll" value="Brazil"> Brazil <span class="f32"><span class="flag br flagsCountries"></span><br/> 
-        <input type="radio" name="hostPoll" value="USA"> United States <span class="f32"><span class="flag us flagsCountries"></span><br/>
-        </form>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <h2>Where was Euro 2016 hosted?</h2>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <form action=""> 
-        <input type="radio" name="hostPoll" value="Ireland"> Ireland <span class="f32"><span class="flag ie flagsCountries"></span><br /> 
-        <input type="radio" name="hostPoll" value="France"> France <span class="f32"><span class="flag fr flagsCountries"></span><br />
-        </form>
-      </td>
-    </tr>
-  </table>
-</p>`,
+  getElements: () => `
+  
+  <div id="intro" class="row">
+    <div class="col-12">
+      <h3 class="text-center ">Quiz: Host Countries</h3>
+    </div>
+
+
+    <div class="col-12">
+      <div class="container" id="poll">
+        <div class="row" id="leftContent">
+         
+              <p class="pollQuestion border-bottom text-left question mx-0">Where was Copa América 2016 hosted?</p>
+              <form action="">
+              <span class="f32 d-inline">
+                <input type="radio" name="hostPoll" value="Brazil">  
+                <span class="flag br flagsCountries"></span> Brazil <br>
+
+                <input type="radio" name="hostPoll" value="USA">  
+                <span class="flag us flagsCountries"></span>United States 
+              </span>
+              </form>
+         
+        </div>
+
+        <div class="row" id="rightContent">
+          
+          <p class="border-bottom question text-left mx-0">Where was Euro 2016 hosted?</p>
+          <form action="">
+          <span class="f32 d-inline">
+               <input type="radio" name="hostPoll" value="Ireland">
+                <span class="flag ie flagsCountries"></span>
+                Ireland <br>
+
+                <input type="radio" name="hostPoll" value="France">
+                <span class="flag fr flagsCountries"></span>
+               France 
+          </form>
+         
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+              <button class="btn btn-primary btn-lg w-50 w-lg-100" type="button" onclick="getNextPage()" id="submitFct">Submit</button>
+          </div>
+      </div>
+    </div>
+  
+  `,
   onNext: () => loadChart()
 };

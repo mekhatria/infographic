@@ -61,7 +61,7 @@ export default () => {
     series: [
       {
         name: 'Most valuable players',
-        color: '#ff002b',
+        color: '#d00',
         data: [
           {
             y: 134,
@@ -139,7 +139,7 @@ export default () => {
     series: [
       {
         name: 'Most valuable players',
-        color: '#002bff',
+        color: '#0272a4',
         data: [
           {
             y: 123,

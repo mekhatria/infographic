@@ -1,6 +1,6 @@
-let americaColor = '#ff002b',
-  europeColor = '#002bff',
-  backgroundColor = 'rgba(255, 255, 255, 0.0)',
+let americaColor = '#d00',
+  europeColor = '#0272a4',
+  backgroundColor = '#fff',
   flagArry = {
     Portugal: 'flag pt',
     Wales: 'flag _Wales',
