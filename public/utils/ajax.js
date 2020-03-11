@@ -4,13 +4,6 @@ let url = 'http://localhost:3000/';
 
 let ajax = function(type, route, data) {
   return new Promise(function(resolve, reject) {
-    console.log({
-      type: type,
-      url: url + route,
-      dataType: 'json',
-      data: data,
-      contentType: 'application/json'
-    });
     $.ajax({
       type: type,
       url: url + route,
@@ -21,11 +14,9 @@ let ajax = function(type, route, data) {
       data: data,
       contentType: 'application/json',
       success: function(result) {
-        console.log('result', result);
         resolve(result);
       },
       error: function(error) {
-        console.log('error', error);
         reject(error);
       }
     });

@@ -35,7 +35,5 @@ export default () => {
     JSON.stringify({
       answers: arrSurvey
     })
-  ).then(data => {
-    console.log(data);
-  });
+  ).then(data => {});
 };

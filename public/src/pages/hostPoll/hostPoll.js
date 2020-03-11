@@ -24,6 +24,5 @@ export default () => {
   for (var i = 0, length = radios.length; i < length; i++) {
     arrSurvey[i].answer = radios[i].checked ? 1 : 0;
   }
-  console.log('arrSurvey', arrSurvey);
   postPoll('hostPoll', { answers: arrSurvey });
 };

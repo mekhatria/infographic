@@ -7,7 +7,6 @@ export default () => {
       for (let i = 0; i < data.answer.length; i++) {
         arrayUpdated[i] = data.answer[i];
       }
-      console.log('In ajax arrayUpdated:  ' + arrayUpdated);
       //Make the chart
       Highcharts.chart('hostFormResult', {
         chart: {

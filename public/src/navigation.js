@@ -1,5 +1,4 @@
 import routes from './routes.js';
-console.log('routes: ', routes);
 
 let path = '/';
 const keys = Object.keys(routes);
@@ -26,7 +25,6 @@ export const getNextPage = () => {
   $('#navigation').show();
   const index = keys.findIndex(key => key === path);
   if (routes[keys[index]].onNext) routes[keys[index]].onNext();
-  console.log('NEXT routes[keys[index]]', routes[keys[index]]);
 
   toggleButton('#nextFct', index + 1 === keys.length - 1);
   toggleButton('#backFct', false);
