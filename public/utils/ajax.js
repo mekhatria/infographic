@@ -15,6 +15,9 @@ let ajax = function(type, route, data) {
       type: type,
       url: url + route,
       dataType: 'json',
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      },
       data: data,
       contentType: 'application/json',
       success: function(result) {
