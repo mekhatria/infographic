@@ -1,6 +1,6 @@
-let url = 'http://localhost:3000/';
+//let url = 'http://localhost:3000/';
 //linkToTheServer
-//let url = 'https://m51zh2s55l.execute-api.eu-west-1.amazonaws.com/Dev/';
+let url = 'https://m51zh2s55l.execute-api.eu-west-1.amazonaws.com/Dev/';
 
 let ajax = function(type, route, data) {
   return new Promise(function(resolve, reject) {
@@ -8,9 +8,6 @@ let ajax = function(type, route, data) {
       type: type,
       url: url + route,
       dataType: 'json',
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      },
       data: data,
       contentType: 'application/json',
       success: function(result) {
